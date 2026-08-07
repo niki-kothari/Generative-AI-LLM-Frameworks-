@@ -59,31 +59,11 @@ streamlit run frontend/content_creator_fe.py
 
 3. In the browser, enter a topic and click `Generate and Evaluate`.
 
-## Run the sentiment analysis app
-
-1. Start the backend server:
-
-```powershell
-python backend/find_sentiment_be.py
-```
-
-2. Start the Streamlit frontend:
-
-```powershell
-streamlit run frontend/find_sentiment_fe.py
-```
-
-3. In the browser, enter a review and click `Analyze Review`.
-
 ## Backend API endpoints
 
 - `POST /generate`
   - Request body: `{ "topic": "..." }`
   - Response: `{ "content": "...", "feedback": "...", "score": ... }`
-
-- `POST /analyze`
-  - Request body: `{ "review": "..." }`
-  - Response includes `review`, `sentiment`, `response`, and `diagnosis` when sentiment is negative
 
 ## Important notes
 
@@ -96,11 +76,9 @@ streamlit run frontend/find_sentiment_fe.py
 ```text
 backend/
   content_creator_be.py
-  find_sentiment_be.py
   .env
 frontend/
   content_creator_fe.py
-  find_sentiment_fe.py
 README.md
 ```
 
